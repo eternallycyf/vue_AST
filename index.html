@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script src="dist/umd/vue.js"></script>
+
+
+<body>
+
+</body>
+<script>
+  // 模板： render > template > el
+  let vm = new Vue({
+    el: '#app',
+    template: `<div id=app style="text-align: center;">
+      哈哈哈哈
+    <span style="color: pink;font-size: 20px;">张三{{123}}</span>
+    <span style="color: aqua;">李四</span>
+  </div>`,
+    data() {
+      return {
+        title: '测试',
+        list: [{
+          name: '张三',
+          age: 50
+        }],
+        user: {
+          zhangsan: {
+            name: '张三',
+            age: 18
+          },
+          lisi: {
+            name: '李四',
+            age: 50,
+            haizi: {
+              name: '张三',
+              age: 18
+            }
+          }
+        }
+      }
+    }
+  })
+  console.log(vm.title, this, 'vms');
+  console.log(vm, this, 'vm');
+</script>
+
+</html>
